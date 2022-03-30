@@ -1,1 +1,15 @@
-<p>welcome works!</p>
+<h1>Welcome</h1>
+
+<button type="button" class="btn btn-primary mb-3" (click)="findActivity()">Find Activity</button>
+
+<div *ngIf="activity != undefined">
+  <h3>{{activity?.activity | uppercase}}</h3>
+
+  <div>{{activity?.type}}</div>
+
+  <br>
+
+  <div>{{activity?.price | currency:"USD"}}</div>
+</div>
+
+
