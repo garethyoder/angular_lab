@@ -9,12 +9,14 @@ import {RouterModule} from "@angular/router";
 import {FormsModule} from "@angular/forms";
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import {HttpClient, HttpClientModule} from "@angular/common/http";
+import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     WelcomeComponent,
-    LoginComponent
+    LoginComponent,
+    ForgotPasswordComponent
   ],
   imports: [
     RouterModule.forRoot(routes),

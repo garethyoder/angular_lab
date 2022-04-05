@@ -1,7 +1,7 @@
 <div>
   <h2>{{welcomeMessage}}</h2>
   <form>
-    User Id: <input [(ngModel)]="userId" name="userId" type="text" /><br/>
+    User Id: <input [(ngModel)]="userId" name="userId" placeholder="Enter User Id" type="text" /><br/>
     Password: <input [(ngModel)]="password" name="password" type="password" /><br />
     <button class="btn btn-primary" (click)="signIn()">Sign In</button>
   </form>
@@ -10,3 +10,5 @@
 
   <p *ngFor="let hero of HEROES">{{hero.name}}</p>
 </div>
+
+<app-forgot-password [userId]="userId" (generatedPassword)="password = $event"></app-forgot-password>

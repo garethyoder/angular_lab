@@ -9,7 +9,7 @@ import {Router} from "@angular/router";
 export class LoginComponent implements OnInit {
 
   welcomeMessage = "Login Page"
-  userId="Enter User Id"
+  userId=""
   password=""
 
   constructor(private router: Router) { }
