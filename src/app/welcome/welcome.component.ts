@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {FindActivityService} from "../find-activity/find-activity.service";
 import {Activity} from "../find-activity/activity";
 
 @Component({
@@ -11,7 +10,7 @@ export class WelcomeComponent implements OnInit {
 
   activity: Activity | undefined
 
-  constructor(private findActivityService: FindActivityService) { }
+  constructor() { }
 
   ngOnInit(): void {
     // this.activity = {
@@ -26,11 +25,11 @@ export class WelcomeComponent implements OnInit {
   }
 
   findActivity() {
-    this.findActivityService.getConfig().subscribe((data: Activity) => {
-        this.activity = data;
-        console.log("data " + JSON.stringify(data))
-      }
-    )
+    // this.findActivityService.getConfig().subscribe((data: Activity) => {
+    //     this.activity = data;
+    //     console.log("data " + JSON.stringify(data))
+    //   }
+    // )
   }
 
 }
